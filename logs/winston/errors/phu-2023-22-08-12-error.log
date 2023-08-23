@@ -1,0 +1,19 @@
+Tue Aug 22 2023 12:13:54 } [PH] error: 
+Invalid `prisma.academicSemester.create()` invocation in
+D:\Programming\NLWD\Projects\university-management\core-service\src\app\modules\academicSemester\academicSemester.service.ts:6:48
+
+  3 const prisma = new PrismaClient();
+  4 
+  5 export const insertIntoDB = async (data: AcademicSemester): Promise<AcademicSemester> => {
+→ 6   const result = await prisma.academicSemester.create({
+        data: {
+          year: 2022,
+          title: "spring",
+          code: 1,
+                ~
+          startMonth: "january",
+          endMonth: "jun"
+        }
+      })
+
+Argument `code`: Invalid value provided. Expected String, provided Int.
